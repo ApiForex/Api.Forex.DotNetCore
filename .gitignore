@@ -3,3 +3,5 @@
 ################################################################################
 
 /.vs
+/Api.Forex.DotNetCore/bin/Release/netcoreapp2.0
+/Api.Forex.DotNetCore/obj

@@ -1,0 +1,138 @@
+﻿@model Api.Forex.DotNetCore.Models.Example1ViewModel
+@{
+    ViewData["Title"] = "Exemple1";
+}
+@section Header{
+    <style>
+        /*Example1 CSS*/
+        button {
+            width:80px;
+        }
+    </style>
+    }
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                @await Html.PartialAsync("_ExamplesMenu.cshtml")
+            </div>
+            <div class="col-sm-9">
+                <h2>Simple javascript converter</h2>
+                <p>Pure Javascipt (vanilla) + Bootstrap 4</p>
+                <div class="card mx-auto" style="width: 30rem;">
+                    <div class="card-body">
+                        <div id="currency_from">
+                            <span>EUR - Euro</span>
+                            <div class="input-group input-group-lg mb-3">
+                                <input type="text" class="form-control" aria-label="Text input with dropdown button" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">USD</button>
+                                    <ul class="dropdown-menu dropdown-menu-right scrollable-menu">
+                                        @foreach (var currency in Model.CurrenciesInfos)
+                                        {
+                                            <li data-name="@Html.Raw(currency.Value.Name)" class="dropdown-item">@currency.Key</li>
+                                        }
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="currency_to">
+                            <span>EUR - Euro</span>
+                            <div class="input-group input-group-lg mb-3">
+                                <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">EUR</button>
+                                    <ul class="dropdown-menu dropdown-menu-right scrollable-menu">
+                                        @foreach (var currency in Model.CurrenciesInfos)
+                                        {
+                                            <li data-name="@Html.Raw(currency.Value.Name)" class="dropdown-item" href="#">@currency.Key</li>
+                                        }
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @section Scripts{
+        <script>
+        var Rates = @Html.Raw(Model.ForexRatesJson);
+        var lang = 'en';
+        var currency_to = document.getElementById('currency_to');
+        var currency_from = document.getElementById('currency_from');
+        var currency_to_span = currency_to.getElementsByTagName('span')[0];
+        var currency_from_span = currency_from.getElementsByTagName('span')[0];
+        var input_to = currency_to.getElementsByTagName('input')[0];
+        var input_from = currency_from.getElementsByTagName('input')[0];
+        var currency_selector_from = currency_from.querySelectorAll(".dropdown-item");
+        var currency_selector_to = currency_to.querySelectorAll(".dropdown-item");
+        for (var i = 0; i < currency_selector_from.length; i++) {
+            currency_selector_from[i].addEventListener('click', function () {
+                currency_from.getElementsByTagName('button')[0].innerHTML = this.innerHTML;
+                currency_from_span.innerHTML = this.innerHTML + ' - ' + this.getAttribute("data-name")
+                //GetRate(this.innerHTML, "THB", 1)
+                Convert()
+            });
+        }
+        for (var i = 0; i < currency_selector_to.length; i++) {
+            currency_selector_to[i].addEventListener('click', function () {
+                currency_to.getElementsByTagName('button')[0].innerHTML = this.innerHTML;
+                currency_to_span.innerHTML = this.innerHTML + ' - ' + this.getAttribute("data-name")
+                //GetRate("USD", this.innerHTML, 1)
+                Convert();
+            });
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+            input_from.addEventListener("keyup", Convert);
+            Convert();
+            //GetRate("EUR", "THB", 1)
+            });
+            /*
+        function GetRate(from, to, amount) {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'Url.Action("Example1Ajax", "Home")');
+            xhr.send();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        var jsonReturend = JSON.parse(xhr.responseText);
+                        var value = jsonReturend.rates[to] * (1 / jsonReturend.rates[from]);
+                        input_to.value = formatResult(value);
+                        console.log(JSON.stringify(jsonReturend) + '=>' + value);
+                        return (value.toLocaleString(lang));
+                    }
+                } else {
+                    return ('Error: ' + xhr.status);
+                }
+            }
+        }*/
+        function Convert() {
+           var from = currency_from.getElementsByTagName('button')[0].innerHTML;
+           var to =  currency_to.getElementsByTagName('button')[0].innerHTML;
+            console.log('amount => ' + amount);
+            var price_to = Rates.rates[to];
+            var price_from = Rates.rates[from];
+            var amount = input_from.value.replace(/,/g, '.');
+            input_to.value = formatResult(amount * (price_to * (1 / price_from))).toLocaleString('lang');
+        }
+    function formatResult(result) {
+        var decimals = 6;
+        if (result > 999) {
+            decimals = 2;
+        }
+        else if (result > 99) {
+            decimals = 3;
+        }
+        else if (result > 9) {
+            decimals = 4;
+        }
+        else if (result > 0.09) {
+            decimals = 5;
+        }
+        return Number(Math.round(result + 'e' + decimals) + 'e-' + decimals);
+    }
+
+        </script>
+    }
+

@@ -1,0 +1,192 @@
+﻿@model Api.Forex.DotNetCore.Models.Example2ViewModel
+@{
+    ViewData["Title"] = "Exemple1";
+}
+@section Header{
+    <style>
+
+    </style>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css">
+}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            @await Html.PartialAsync("_ExamplesMenu.cshtml")
+        </div>
+        <div class="col-sm-9">
+            @Newtonsoft.Json.JsonConvert.SerializeObject(Model.CurrenciesList)
+            @foreach (var currency in Model.CurrenciesList)
+    {
+        <div>@currency.Name</div>
+}
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <li class="dropdown-item" type="button">Action</li>
+                    <li class="dropdown-item" type="button">Another action</li>
+                    <li class="dropdown-item" type="button">Something else here</li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown button
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li class="dropdown-item" href="#">Action</li>
+                    @foreach (var item in Model.CurrenciesList)
+            {
+                <li class="dropdown-item" data-symbol="@item.Symbol" data-price="@item.Price">@item.Code - @item.Name</li>
+    }
+                </ul>
+            </div>
+            <select class="form-control mb-2 mr-sm-2 custom-select">
+                <option data-price="">Please select one</option>
+                @foreach (var item in Model.CurrenciesList)
+        {
+            <option data-symbol="@item.Symbol" data-price="@item.Price">@item.Code - @item.Name</option>
+}
+            </select>
+            <h2>Simple javascript converter</h2>
+            <p>Pure Javascipt (vanilla) + Bootstrap 4</p>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <button class="dropdown-item" type="button">Action</button>
+                    <button class="dropdown-item" type="button">Another action</button>
+                    <button class="dropdown-item" type="button">Something else here</button>
+                </div>
+            </div>
+            <div class="card-deck mb-3 text-center">
+                <div class="card mb-4 box-shadow">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-normal">Novice</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title"><span class="symbol">$</span><span data-usd-price="5" class="price">5</span> <small class="text-muted">/ mo</small></h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li>10 users included</li>
+                            <li>2 GB of storage</li>
+                            <li>Email support</li>
+                            <li>Help center access</li>
+                        </ul>
+                        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up for free</button>
+                    </div>
+                </div>
+                <div class="card mb-4 box-shadow">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-normal">Pro</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title"><span class="symbol">$</span><span data-usd-price="15" class="price">15</span> <small class="text-muted">/ mo</small></h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li>20 users included</li>
+                            <li>10 GB of storage</li>
+                            <li>Priority email support</li>
+                            <li>Help center access</li>
+                        </ul>
+                        <button type="button" class="btn btn-lg btn-block btn-primary">Get started</button>
+                    </div>
+                </div>
+                <div class="card mb-4 box-shadow">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-normal">Enterprise</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title"><span class="symbol">$</span><span data-usd-price="29" class="price">29</span> <small class="text-muted">/ mo</small></h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li>30 users included</li>
+                            <li>15 GB of storage</li>
+                            <li>Phone and email support</li>
+                            <li>Help center access</li>
+                        </ul>
+                        <button type="button" class="btn btn-lg btn-block btn-primary">Contact us</button>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">View</a>
+                    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Controller</a>
+                    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Javascript</a>
+                </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                    <pre><code class="c#">
+{
+  "success": false,
+  "error": {
+    "code": 201,
+    "message": "User entered an invalid access key."
+  }
+}
+</code></pre>
+                </div>
+                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                    <pre><code class="c#">
+public async Task<IActionResult> Example2()
+{
+    // Your Api key configurable in appsettings.json
+    string ApiForexKey = _Configuration["ApiForex:Key"];
+    // List of currencies to convert (optionnal)
+    string[] CurrenciesList = new string[] { "EUR", "USD", "JPY", "GBP", "AUD", "CAD", "CNY" };
+    // Retreive the currencies and add it to cache for 60 minutes
+    string ForexRatesJson = await _Cache.GetOrCreateAsync("ForexRatesJson", async entry =>
+    {
+        ForexRatesJson = await ApiForex.GetRateJson(ApiForexKey, "USD", CurrenciesList);
+        entry.SlidingExpiration = TimeSpan.FromMinutes(60);
+        return ForexRatesJson;
+    });
+    return View(ForexRatesJson);
+}
+</code></pre>
+                </div>
+                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>
+        //var el = document.body.getElementsByTagName('pre');
+
+        //hljs.highlightBlock(el[0]);
+        //console.log(JSON.stringify(el.length));
+
+        $('select').on('change', function (e) {
+            var optionSelected = $("option:selected", this);
+            var valueSelected = this.value;
+            var from_price = $(this).find(':selected').attr("data-price")
+            $(".symbol").html($(this).find(':selected').attr("data-symbol"));
+            $(".symbol").html($(this).find(':selected').attr("data-symbol"));
+            console.log($(this).find(':selected').attr("data-symbol"));
+            $(".price").each(function (e) {
+                console.log(JSON.stringify($(this).attr("data-usd-price")));
+                $(this).html(formatResult(from_price * $(this).attr("data-usd-price")));
+            });
+        });
+        function formatResult(result) {
+            var decimals = 0;
+            if (result > 9) {
+                decimals = 1;
+            }
+            else if (result > 0.09) {
+                decimals = 1;
+            }
+            return Number(Math.round(result + 'e' + decimals) + 'e-' + decimals);
+        }
+
+        $("pre").each(function (i, e) {
+            hljs.highlightBlock(e);
+        });
+
+    </script>
+}
+
