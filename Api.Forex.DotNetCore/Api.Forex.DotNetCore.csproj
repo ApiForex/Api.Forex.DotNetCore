@@ -6,6 +6,37 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="obj\Debug\netcoreapp2.0\Api.Forex.DotNetCore.AssemblyInfo.cs" />
+    <Compile Include="obj\Release\netcoreapp2.0\Api.Forex.DotNetCore.AssemblyInfo.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="obj\Debug\netcoreapp2.0\Api.Forex.DotNetCore.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\project.assets.json" />
+    <Content Include="obj\Release\netcoreapp2.0\Api.Forex.DotNetCore.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Release\netcoreapp2.0\PubTmp\Out\Api.Forex.DotNetCore.deps.json" />
+    <Content Include="obj\Release\netcoreapp2.0\PubTmp\Out\Api.Forex.DotNetCore.runtimeconfig.json" />
+    <Content Include="obj\Release\netcoreapp2.0\PubTmp\Out\appsettings.Development.json" />
+    <Content Include="obj\Release\netcoreapp2.0\PubTmp\Out\appsettings.json" />
+    <Content Include="obj\Release\netcoreapp2.0\PubTmp\Out\bundleconfig.json" />
+    <Content Include="obj\Release\netcoreapp2.0\PubTmp\Out\wwwroot\css\site.css" />
+    <Content Include="obj\Release\netcoreapp2.0\PubTmp\Out\wwwroot\css\site.min.css" />
+    <Content Include="obj\Release\netcoreapp2.0\PubTmp\Out\wwwroot\favicon.ico" />
+    <Content Include="obj\Release\netcoreapp2.0\PubTmp\Out\wwwroot\lib\bootstrap\.bower.json" />
+    <Content Include="obj\Release\netcoreapp2.0\PubTmp\Out\wwwroot\lib\bootstrap\dist\css\bootstrap-theme.css" />
+    <Content Include="obj\Release\netcoreapp2.0\PubTmp\Out\wwwroot\lib\bootstrap\dist\css\bootstrap-theme.min.css" />
+    <Content Include="obj\Release\netcoreapp2.0\PubTmp\Out\wwwroot\lib\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="obj\Release\netcoreapp2.0\PubTmp\Out\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="obj\Release\netcoreapp2.0\PubTmp\Out\wwwroot\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="obj\Release\netcoreapp2.0\PubTmp\Out\wwwroot\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="obj\Release\netcoreapp2.0\PubTmp\Out\wwwroot\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="obj\Release\netcoreapp2.0\PubTmp\Out\wwwroot\lib\jquery-validation-unobtrusive\.bower.json" />
+    <Content Include="obj\Release\netcoreapp2.0\PubTmp\Out\wwwroot\lib\jquery-validation\.bower.json" />
+    <Content Include="obj\Release\netcoreapp2.0\PubTmp\Out\wwwroot\lib\jquery\.bower.json" />
+    <Content Include="obj\Release\netcoreapp2.0\PubTmp\Out\wwwroot\lib\jquery\LICENSE.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Api.Forex.Currency.Converter" Version="1.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.2" />
@@ -13,6 +44,78 @@
 
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="obj\Api.Forex.DotNetCore.csproj.nuget.cache" />
+    <None Include="obj\Api.Forex.DotNetCore.csproj.nuget.g.props" />
+    <None Include="obj\Api.Forex.DotNetCore.csproj.nuget.g.targets" />
+    <None Include="obj\Debug\netcoreapp2.0\Api.Forex.DotNetCore.AssemblyInfoInputs.cache" />
+    <None Include="obj\Debug\netcoreapp2.0\Api.Forex.DotNetCore.csproj.CopyComplete" />
+    <None Include="obj\Debug\netcoreapp2.0\Api.Forex.DotNetCore.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\netcoreapp2.0\Api.Forex.DotNetCore.csprojResolveAssemblyReference.cache" />
+    <None Include="obj\Debug\netcoreapp2.0\Api.Forex.DotNetCore.dll" />
+    <None Include="obj\Debug\netcoreapp2.0\Api.Forex.DotNetCore.pdb" />
+    <None Include="obj\Release\netcoreapp2.0\Api.Forex.DotNetCore.AssemblyInfoInputs.cache" />
+    <None Include="obj\Release\netcoreapp2.0\Api.Forex.DotNetCore.csproj.CopyComplete" />
+    <None Include="obj\Release\netcoreapp2.0\Api.Forex.DotNetCore.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Release\netcoreapp2.0\Api.Forex.DotNetCore.csprojResolveAssemblyReference.cache" />
+    <None Include="obj\Release\netcoreapp2.0\Api.Forex.DotNetCore.dll" />
+    <None Include="obj\Release\netcoreapp2.0\Api.Forex.DotNetCore.pdb" />
+    <None Include="obj\Release\netcoreapp2.0\Api.Forex.DotNetCore.PrecompiledViews.dll" />
+    <None Include="obj\Release\netcoreapp2.0\Api.Forex.DotNetCore.PrecompiledViews.pdb" />
+    <None Include="obj\Release\netcoreapp2.0\microsoft.aspnetcore.mvc.razor.viewcompilation.rsp" />
+    <None Include="obj\Release\netcoreapp2.0\PubTmp\Out\Api.Forex.Currency.Converter.dll" />
+    <None Include="obj\Release\netcoreapp2.0\PubTmp\Out\Api.Forex.Currency.Converter.pdb" />
+    <None Include="obj\Release\netcoreapp2.0\PubTmp\Out\Api.Forex.DotNetCore.dll" />
+    <None Include="obj\Release\netcoreapp2.0\PubTmp\Out\Api.Forex.DotNetCore.pdb" />
+    <None Include="obj\Release\netcoreapp2.0\PubTmp\Out\Api.Forex.DotNetCore.PrecompiledViews.dll" />
+    <None Include="obj\Release\netcoreapp2.0\PubTmp\Out\Api.Forex.DotNetCore.PrecompiledViews.pdb" />
+    <None Include="obj\Release\netcoreapp2.0\PubTmp\Out\dotnet-aspnet-codegenerator-design.dll" />
+    <None Include="obj\Release\netcoreapp2.0\PubTmp\Out\Microsoft.CodeAnalysis.CSharp.Workspaces.dll" />
+    <None Include="obj\Release\netcoreapp2.0\PubTmp\Out\Microsoft.CodeAnalysis.Workspaces.dll" />
+    <None Include="obj\Release\netcoreapp2.0\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll" />
+    <None Include="obj\Release\netcoreapp2.0\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll" />
+    <None Include="obj\Release\netcoreapp2.0\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGeneration.dll" />
+    <None Include="obj\Release\netcoreapp2.0\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll" />
+    <None Include="obj\Release\netcoreapp2.0\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll" />
+    <None Include="obj\Release\netcoreapp2.0\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll" />
+    <None Include="obj\Release\netcoreapp2.0\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll" />
+    <None Include="obj\Release\netcoreapp2.0\PubTmp\Out\Newtonsoft.Json.dll" />
+    <None Include="obj\Release\netcoreapp2.0\PubTmp\Out\NuGet.Frameworks.dll" />
+    <None Include="obj\Release\netcoreapp2.0\PubTmp\Out\protobuf-net.dll" />
+    <None Include="obj\Release\netcoreapp2.0\PubTmp\Out\System.Composition.AttributedModel.dll" />
+    <None Include="obj\Release\netcoreapp2.0\PubTmp\Out\System.Composition.Convention.dll" />
+    <None Include="obj\Release\netcoreapp2.0\PubTmp\Out\System.Composition.Hosting.dll" />
+    <None Include="obj\Release\netcoreapp2.0\PubTmp\Out\System.Composition.Runtime.dll" />
+    <None Include="obj\Release\netcoreapp2.0\PubTmp\Out\System.Composition.TypedParts.dll" />
+    <None Include="obj\Release\netcoreapp2.0\PubTmp\Out\web.config" />
+    <None Include="obj\Release\netcoreapp2.0\PubTmp\Out\wwwroot\images\banner1.svg" />
+    <None Include="obj\Release\netcoreapp2.0\PubTmp\Out\wwwroot\images\banner2.svg" />
+    <None Include="obj\Release\netcoreapp2.0\PubTmp\Out\wwwroot\images\banner3.svg" />
+    <None Include="obj\Release\netcoreapp2.0\PubTmp\Out\wwwroot\images\banner4.svg" />
+    <None Include="obj\Release\netcoreapp2.0\PubTmp\Out\wwwroot\js\site.js" />
+    <None Include="obj\Release\netcoreapp2.0\PubTmp\Out\wwwroot\js\site.min.js" />
+    <None Include="obj\Release\netcoreapp2.0\PubTmp\Out\wwwroot\lib\bootstrap\dist\css\bootstrap-theme.css.map" />
+    <None Include="obj\Release\netcoreapp2.0\PubTmp\Out\wwwroot\lib\bootstrap\dist\css\bootstrap-theme.min.css.map" />
+    <None Include="obj\Release\netcoreapp2.0\PubTmp\Out\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map" />
+    <None Include="obj\Release\netcoreapp2.0\PubTmp\Out\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map" />
+    <None Include="obj\Release\netcoreapp2.0\PubTmp\Out\wwwroot\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.svg" />
+    <None Include="obj\Release\netcoreapp2.0\PubTmp\Out\wwwroot\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="obj\Release\netcoreapp2.0\PubTmp\Out\wwwroot\lib\bootstrap\dist\js\bootstrap.js" />
+    <None Include="obj\Release\netcoreapp2.0\PubTmp\Out\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js" />
+    <None Include="obj\Release\netcoreapp2.0\PubTmp\Out\wwwroot\lib\bootstrap\dist\js\npm.js" />
+    <None Include="obj\Release\netcoreapp2.0\PubTmp\Out\wwwroot\lib\bootstrap\LICENSE" />
+    <None Include="obj\Release\netcoreapp2.0\PubTmp\Out\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js" />
+    <None Include="obj\Release\netcoreapp2.0\PubTmp\Out\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js" />
+    <None Include="obj\Release\netcoreapp2.0\PubTmp\Out\wwwroot\lib\jquery-validation\dist\additional-methods.js" />
+    <None Include="obj\Release\netcoreapp2.0\PubTmp\Out\wwwroot\lib\jquery-validation\dist\additional-methods.min.js" />
+    <None Include="obj\Release\netcoreapp2.0\PubTmp\Out\wwwroot\lib\jquery-validation\dist\jquery.validate.js" />
+    <None Include="obj\Release\netcoreapp2.0\PubTmp\Out\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js" />
+    <None Include="obj\Release\netcoreapp2.0\PubTmp\Out\wwwroot\lib\jquery-validation\LICENSE.md" />
+    <None Include="obj\Release\netcoreapp2.0\PubTmp\Out\wwwroot\lib\jquery\dist\jquery.js" />
+    <None Include="obj\Release\netcoreapp2.0\PubTmp\Out\wwwroot\lib\jquery\dist\jquery.min.js" />
+    <None Include="obj\Release\netcoreapp2.0\PubTmp\Out\wwwroot\lib\jquery\dist\jquery.min.map" />
   </ItemGroup>
 
   <ItemGroup>
