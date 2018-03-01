@@ -6,5 +6,6 @@ namespace Api.Forex.DotNetCore.Models
     public class IndexViewModel
     {
         public DailyRates ForexRates { get; set; }
+        public string ApiError { get; set; }
     }
 }

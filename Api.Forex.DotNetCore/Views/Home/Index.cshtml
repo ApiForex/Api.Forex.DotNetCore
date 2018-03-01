@@ -1,4 +1,8 @@
 ﻿@model Api.Forex.DotNetCore.Models.IndexViewModel
+@if (Model.ApiError != null)
+{
+<div>API ERROR</div>
+}
     <section class="jumbotron text-center">
         <div class="container">
             <h1 class="jumbotron-heading">Free Api Forex .Net Core</h1>
@@ -82,7 +86,7 @@
     </div><!-- /.container -->
     <div class="row">
         <div class="col-md-3">
-            <h2>@Model</h2>
+            <h2>@Model.ApiError</h2>
             <ul>
                 <li>Sample pages using ASP.NET Core MVC</li>
                 <li>Theming using <a href="https://go.microsoft.com/fwlink/?LinkID=398939">Bootstrap</a></li>
@@ -110,7 +114,7 @@
                 </p>
             </div>
             <table>
-                @foreach (var item in Model.ForexRates.rates)
+                @foreach (var item in Model?.ForexRates?.rates)
                 {
                     <tr><td>@item.Key</td><td>@item.Value</td></tr>
                 }

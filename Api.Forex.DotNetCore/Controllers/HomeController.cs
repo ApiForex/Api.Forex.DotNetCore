@@ -23,7 +23,14 @@ namespace Api.Forex.DotNetCore.Controllers
         public async Task<IActionResult> Index()
         {
             string ApiForexKey = _Configuration["ApiForex:Key"];
-            DailyRates ForexRates = await _Cache.GetOrCreateAsync("FxRates", async entry =>
+            if (string.IsNullOrEmpty(ApiForexKey))
+            {
+                return View(new IndexViewModel
+                {
+                    ApiError = "No Key",
+                });
+            }
+            DailyRates ForexRates = await _Cache.GetOrCreateAsync("FxRatesHome", async entry =>
             {
                 ForexRates = await ApiForex.GetRate(ApiForexKey);
                 //entry.SlidingExpiration = TimeSpan.FromMinutes((DateTime.UtcNow - Convert.ToDateTime(ForexRates.timestamp)).TotalMinutes + 5);
