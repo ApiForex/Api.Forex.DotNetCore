@@ -1,5 +1,8 @@
-### Api Forex .Net Core ###
-
+Api Forex .Net Core
+-
+~~~
+Nuget: PM>Install-Package Api.Forex.Currency.Converter
+~~~
 The sample demonstrates how to retrieve the Api.Forex currencies rates and how to use it on a C# .Net Core application.
 
 Open a free account on https://api.forex and get an **api key**
