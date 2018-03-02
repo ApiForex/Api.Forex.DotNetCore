@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.0": {
-      "Api.Forex.Currency.Converter/1.0.3": {
+      "Api.Forex.Currency.Converter/1.0.5": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "11.0.1",
@@ -10,10 +10,10 @@
           "protobuf-net": "2.3.7"
         },
         "compile": {
-          "lib/netcoreapp2.0/Api.Forex.Currency.Converter.dll": {}
+          "lib/netcoreapp2.0/Api.Forex.Sharp.dll": {}
         },
         "runtime": {
-          "lib/netcoreapp2.0/Api.Forex.Currency.Converter.dll": {}
+          "lib/netcoreapp2.0/Api.Forex.Sharp.dll": {}
         }
       },
       "Libuv/1.10.0": {
@@ -4967,15 +4967,15 @@
     }
   },
   "libraries": {
-    "Api.Forex.Currency.Converter/1.0.3": {
-      "sha512": "xsCKjxB+zI+tnzDEGKJehoOXMfmewB9LvThbUTPWWFZhl0tGtCkscbD+0tk3p4ZJUSBCQ4NMLU7wQqtfK1OpwQ==",
+    "Api.Forex.Currency.Converter/1.0.5": {
+      "sha512": "N5FTQk0oKQCxv0mumksmYKyXexs6slVir/+o43A+hb3Zv5YdhylE9Vo2y2twD+JOqZeTxUsbzSou1ltWgfac2Q==",
       "type": "package",
-      "path": "api.forex.currency.converter/1.0.3",
+      "path": "api.forex.currency.converter/1.0.5",
       "files": [
-        "api.forex.currency.converter.1.0.3.nupkg.sha512",
+        "api.forex.currency.converter.1.0.5.nupkg.sha512",
         "api.forex.currency.converter.nuspec",
-        "lib/net462/Api.Forex.Currency.Converter.dll",
-        "lib/netcoreapp2.0/Api.Forex.Currency.Converter.dll"
+        "lib/net462/Api.Forex.Sharp.dll",
+        "lib/netcoreapp2.0/Api.Forex.Sharp.dll"
       ]
     },
     "Libuv/1.10.0": {
@@ -12876,7 +12876,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
-      "Api.Forex.Currency.Converter >= 1.0.3",
+      "Api.Forex.Currency.Converter >= 1.0.5",
       "Microsoft.AspNetCore.All >= 2.0.5",
       "Microsoft.NETCore.App >= 2.0.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.0.2"
@@ -12928,7 +12928,7 @@
         "dependencies": {
           "Api.Forex.Currency.Converter": {
             "target": "Package",
-            "version": "[1.0.3, )"
+            "version": "[1.0.5, )"
           },
           "Microsoft.AspNetCore.All": {
             "target": "Package",
