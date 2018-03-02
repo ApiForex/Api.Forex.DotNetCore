@@ -1,8 +1,7 @@
 Open a free account on https://api.forex and get an **api key**
 
 ~~~csharp
-string ApiForexKey = "{YourKey}"
-DailyRates ForexRates = await ApiForex.GetRate(ApiForexKey);
+DailyRates ForexRates = await ApiForex.GetRate("YourApiForexKey");
 ~~~
 
 Convert the rates to an other currency.
