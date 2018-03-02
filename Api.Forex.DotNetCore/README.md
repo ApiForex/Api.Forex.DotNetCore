@@ -6,4 +6,5 @@
 Convert the rates to an other currency.
 Example: convert 5 Thai bahts in Euros
 
+
     decimal test = ForexRates.Convert("THB", "EUR", 5)
