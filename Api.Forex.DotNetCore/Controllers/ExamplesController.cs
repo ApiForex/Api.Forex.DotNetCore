@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Api.Forex.Currency.Converter;
 using Api.Forex.DotNetCore.Models;
+using Api.Forex.Sharp;
+using Api.Forex.Sharp.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Configuration;
@@ -58,7 +59,7 @@ namespace Api.Forex.DotNetCore.Controllers
             string[] CurrenciesList = new string[] { "EUR", "USD", "JPY", "GBP", "AUD", "CAD", "CNY" };
             // Retreive the currencies and add it to cache for 60 minutes
             // https://v1.api.forex/daily-rates.json?to=EUR,USD,JPY,GBP,AUD,CAD,CNY&key={YourKey}
-            DailyRates ForexRates = await _Cache.GetOrCreateAsync("ForexRates", async entry =>
+            ApiForexRates ForexRates = await _Cache.GetOrCreateAsync("ForexRates", async entry =>
             {
                 ForexRates = await ApiForex.GetRate(ApiForexKey, "proto", "USD", CurrenciesList);
                 entry.SlidingExpiration = TimeSpan.FromMinutes(60);

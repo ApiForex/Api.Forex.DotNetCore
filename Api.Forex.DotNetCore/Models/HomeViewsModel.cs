@@ -1,11 +1,10 @@
-using Api.Forex.Currency.Converter;
-using System.Collections.Generic;
+using Api.Forex.Sharp.Models;
 
 namespace Api.Forex.DotNetCore.Models
 {
     public class IndexViewModel
     {
-        public DailyRates ForexRates { get; set; }
+        public ApiForexRates ForexRates { get; set; }
         public string ApiError { get; set; }
     }
 }

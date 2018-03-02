@@ -1,4 +1,4 @@
-using Api.Forex.Currency.Converter;
+using Api.Forex.Sharp.Models;
 using System.Collections.Generic;
 
 namespace Api.Forex.DotNetCore.Models
@@ -6,7 +6,7 @@ namespace Api.Forex.DotNetCore.Models
     public class Example1ViewModel
     {
         public string ForexRatesJson { get; set; }
-        public DailyRates ForexRates { get; set; }
+        public ApiForexRates ForexRates { get; set; }
         public Dictionary<string, CurrencyInfos> CurrenciesInfos { get; set; }
     }
     public class Example2ViewModel

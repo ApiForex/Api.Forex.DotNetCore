@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Api.Forex.DotNetCore.Models;
 using Microsoft.Extensions.Configuration;
-using Api.Forex.Currency.Converter;
+using Api.Forex.Sharp;
 using Microsoft.Extensions.Caching.Memory;
+using Api.Forex.Sharp.Models;
 
 namespace Api.Forex.DotNetCore.Controllers
 {
@@ -23,14 +24,7 @@ namespace Api.Forex.DotNetCore.Controllers
         public async Task<IActionResult> Index()
         {
             string ApiForexKey = _Configuration["ApiForex:Key"];
-            if (string.IsNullOrEmpty(ApiForexKey))
-            {
-                return View(new IndexViewModel
-                {
-                    ApiError = "No Key",
-                });
-            }
-            DailyRates ForexRates = await _Cache.GetOrCreateAsync("FxRatesHome", async entry =>
+            ApiForexRates ForexRates = await _Cache.GetOrCreateAsync("FxRatesHome", async entry =>
             {
                 ForexRates = await ApiForex.GetRate(ApiForexKey);
                 //entry.SlidingExpiration = TimeSpan.FromMinutes((DateTime.UtcNow - Convert.ToDateTime(ForexRates.timestamp)).TotalMinutes + 5);
@@ -44,7 +38,7 @@ namespace Api.Forex.DotNetCore.Controllers
         }
         public IActionResult Error()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return View(new ErrorsModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }

@@ -2,7 +2,7 @@ using System;
 
 namespace Api.Forex.DotNetCore.Models
 {
-    public class ErrorViewModel
+    public class ErrorsModel
     {
         public string RequestId { get; set; }
 
